@@ -25,9 +25,9 @@ class PointNet2ClsSSG(nn.Module):
         return x
     
 
-class PointNet2SceneSeg(nn.Module):
+class PointNet2SceneSegSSG(nn.Module):
     def __init__(self, num_classes):
-        super(PointNet2SceneSeg, self).__init__()
+        super(PointNet2SceneSegSSG, self).__init__()
         self.sa1 = SA(1024, 0.1, 32, 6 + 3, [32, 32, 64])
         self.sa2 = SA(256, 0.2, 32, 64 + 3, [64, 64, 128])
         self.sa3 = SA(64, 0.4, 32, 128 + 3, [128, 128, 256])
